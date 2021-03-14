@@ -1,0 +1,6 @@
+Befehl,Befehlsopcode,Datenbyte 1,Datenbyte 2,Datenbyte 3,Datenbyte 4
+Start,128,,,,
+Safe,130,,,,
+Full,131,,,,
+Drive,137,Geschwindigkeit (-500 – 500 mm/s),,Radius (-2000 – 2000 mm),
+Drive Direct,145,Geschwindigkeit rechtes Rad (-500 – 500 mm/s),,Geschwindigkeit linkes Rad (-500 – 500 mm/s),

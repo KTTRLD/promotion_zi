@@ -1,0 +1,11 @@
+Name,Modus,Zeit,Blickbewegung,Lidschluss,Horizontale_Augengeste,Vertikale_Augengeste,Stoppmechanismus,Steuerungskomandos,Moduswechsel,Sonstige,Ermüdung,Handling,Panikschalter,Note
+A,Diskret,120,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,wenig ermüdend,einfach,einfach,2
+B,Diskret,63,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,wenig ermüdend,einfach,sehr einfach,2
+C,Diskret,120,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,wenig ermüdend,einfach,sehr einfach,2
+D,Diskret,105,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,wenig ermüdend,einfach,NA,2
+E,Diskret,96,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,wenig ermüdend,schwer,einfach,3
+A,Kontinuierlich,96,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,wenig ermüdend,einfach,einfach,2
+B,Kontinuierlich,36,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,ermüdend,einfach,schwer,3
+C,Kontinuierlich,180,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,ermüdend,schwer,schwer,3
+D,Kontinuierlich,166,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,ermüdend,schwer,NA,4
+E,Kontinuierlich,92,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,wenig ermüdend,einfach,einfach,2

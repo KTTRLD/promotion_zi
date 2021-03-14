@@ -1,0 +1,152 @@
+\documentclass[11pt,a4paper,onecolumn,twoside,ngerman]{book}
+
+% Konfiguration laden
+\include{includes/configuration}
+% Shortcuts laden
+\include{includes/shortcuts}
+
+\begin{document}
+
+
+\section*{Themenzusammenfassung}
+Im Rahmen dieser Abschlussarbeit soll ein Softwareprototyp realisiert werden, der es ermöglicht mit Hilfe definierter Augengesten einen beweglichen Roboter (iRobot Roomba 620) zu steuern. Die Augengestenerkennung erfolgt mittels eines stationären Eyetrackingsystems (Systems RED von SensoMotoric Instruments GmbH), welches an einem Bildschirm angebracht ist. Hierbei ermöglicht eine am Roboter angebrachte Kamera eine \enquote{Live-Ansicht} der Umgebung aus \enquote{Sicht} des Roboters und präsentiert dies auf den Stimuluspräsentierenden Bildschirm, welcher vom Eyetracker \enquote{überwacht} wird. Primär soll in der Arbeit die Frage der Machbarkeit und die Frage der Präzision einer derartigen Mensch-Roboter-Interaktion geklärt werden. Ferner soll abgeschätzt werden, wie ermüdend diese Art der Steuerung ist und ob Unterschiede zwischen den verschiedenen Steuerungssystemen vorhanden sind. Außerdem soll eine Art \enquote{Panikschalter}, also ein sofortiger Stopp des Roboters umgesetzt werden.
+ 
+Die Steuerung eines Roboters durch Augengesten ist Teil eines Prototyps, mit welchem die Kommunikations- und Interaktionsmöglichkeiten von Locked-In-Syndrom (LIS) Patienten unter Verwendung eines Telepräsenz-System (TPS) erheblich erleichtert und erweitert werden sollen. Im Rahmen des Prototyps sollen zudem in Zukunft ausgewählte Interaktionsmöglichkeiten durch eine automatische Objektklassifikation in den Videobildern des TPS umgesetzt werden (\vgl \cite{Eidam2016}). Letzteres ist jedoch nicht Gegenstand dieser Arbeit. 
+ 
+% Aufgrund der inhaltlichen Nähe der Grundlagen dieser Arbeit mit der Vorgängerarbeit von Frau Eidam, werde ich mich bzgl. der Grundlagen stark inhaltlich an dieser Arbeit orientieren. Hierbei sollen zu Beginn ebenfalls die grundsätzliche Funktionsweise des menschlichen Auges und deren Bewegungen aufgezeigt werden. Es sollen die Möglichkeiten der Aufzeichnung von Augenbewegung mittels Eyetracker aufgezeigt werden. Es folgt eine Darstellung der verschiedenen möglichen Methoden mit Spezifizierung der in der Arbeit verwendeten Tracking Methode, sowie ein Überblick über die Anwendungsgebiete von Eyetrackingsystemen mit der Hinführung zu Medizinischen Anwendungsgebieten und hier spezielle Erkrankungen, welche für Eyetrackingsysteme und zur Erweiterung der Möglichkeiten einzelner beeinträchtigter Personen eingesetzt werden können. Abschließend soll der Einsatz von Telepräsenzrobotern in diesem Anwendungsbereich beschrieben und der aktuelle Stand dieser Technik aufgezeigt werden.
+ 
+%Anschließend folgt die Beschreibung, der zur Realisierung der Software notwendigen Modellbildung, welche sich ebenfalls an der Struktur des MVC orientiert und dies um die Bereiche des Roomba-Client und die MJPG- Video-Stream erweitern soll. Es folgt die Beschreibung der Augengestensteuerung und die Beschreibung der Umsetzung der Steuerungsmethoden. Angedacht sind eine Basissteuerung und eine Art “Joystick”-Steuerung. Folgend wird auf die Benutzeroberfläche und die Softwarearchitektur, sowie die technische Umsetzung eingegangen werden, analog zur Arbeit von Frau Eidam. 
+
+Die Benutzerfreundlichkeit des Systems soll mittels eines Usability-Tests evaluiert und bestätigt werden. Es gibt bereits TPS auf dem Markt, jedoch ist die Steuerung per Augengesten bislang kaum etabliert.
+Zur Testung der Usibility in den Bereichen: Präzision, Ermüdung, \enquote{Panikschalter} ist geplant, dies mittels eines \enquote{Parcours} mit einzelnen \enquote{Punkten}, die von einem Startpunkt angefahren werden zu testen. Hierbei kann die Quantifizierung der Steuerungssignale oder der absoluten Zeit als Merkmal dienen. Ferner kann überlegt werden, ob die Steuerung mit den Augen gegen eine \enquote{normale} Nutzung mit Maus oder Tastatur getestet werden soll und in wieweit sich dies unterscheidet. Als Steuerungsmodi für den Roboter, soll eine \enquote{einfache} Basissteuerung sowie eine etwas anspruchsvollere Steuerung in Form einer Art \enquote{Joystick} realisiert werden.
+
+Der Prototyp baut grundsätzlichen auf dem Programm zur Erkennung von Augengesten zur Sonifikation von Bilddateien von Frau Eidam \cite{Eidam2016} auf. Hierbei wird das Programm jedoch um die Visualisierung eines Motion JPEG Streams mittels Java und der Steureungsmodi zur Bewegung des Roombas augmentiert. Die Funktionalität der Objekterkennung von statischen Bildern und Sonifikation bleibt erhalten, wird jedoch nicht genutzt.
+
+Die Software ist somit prinzipiell eine Erweiterung der Software von Frau Eidam und basiert damit auf den bereits gewonnen Eigenschaften bzgl der Augengesten, um dem o.g. Langzeitziel einen Schritt näher zu kommen. 
+
+
+\newpage
+
+\section*{Zeitplan}
+\begin{table}[htp]
+\begin{longtable}{|p{1cm}|p{1.5cm}|p{1.5cm}|p{9cm}|p{0.5cm}|}
+%\begin{tabular}{l|l|ll|c}
+%\toprule
+\multicolumn{5}{c}{\LARGE \bf{Grober Zeitplan -  Abschlussarbeit
+}}  \\
+\hline
+\rowcolor{orange} \bf Mlst. & \bf Von & \bf Bis & \bf Ziele & \\
+%\midrule
+%\cellcolor{green}
+%\checked 
+
+%\newline - Software-Testversion - Stabilität ausreichend zur Evaluation der Basis-Steuerung + Codeoptimierung + Testfälle besprechen. 
+
+%\newline - Konzept der Arbeit fertigstellen und Unklarheiten besprechen.
+
+\hline
+1 &\multicolumn{2}{|c|}{\bf Bis 01.10.2016} &  - Anmeldung der Bachelorarbeit beim Prüfungsamt.
+\newline - Evaluationsbogen mit Evaluationsinhalten festlegen. 
+& \\
+\hline
+2 & \multicolumn{2}{|c|}{KW 40} & - Fertigstellung des Kapitels Einführung.&\\ 
+\hline
+3 & KW 41 & KW 43 & - Fertigstellung des Kapitels Grundlagen. \newline - Fertigstellung des Kapitels Fragestellung und Testmerkmale.
+\newline - Fertigstellung Evaluationsbogen. & \\
+\hline
+4 & KW 44 & KW 45 & - Softwareimplementierung der Augensteuerung abschließen. & \\
+\hline
+5 & \multicolumn{2}{|c|}{KW 46} & - Präsenzphase in Hagen mit Testung und Evaluation der Augensteuerung. & \\
+\hline
+6 & KW 47 & KW 48 & - Fertigstellung Kapitel Implementierung.\newline - Evaluationsergebnisse zusammenfassen. & \\
+\hline
+7 & KW 49 & KW 52 & - Fertigstellung der ersten Version der Abschlussarbeit nach Abschluss der letzten Kapitel.\newline - Abgabe zum ersten Korrekturlesen. & \\
+\hline
+8 & KW 1 & KW 4 & - Pufferphase.&\\
+\hline
+9 & KW 5 & KW 8 & - Bearbeitung der Korrekturvorschläge mit Fertigstellung der zweiten Version. 
+\newline - ggf. Abgabe zum zweiten Korrekturlesen.& \\
+\hline
+10 & KW 9 & KW 11 & - Bearbeitung der Korrekturvorschläge mit Fertigstellung der endgültigen Version. \newline - ggf. Abgabe zum letzten Korrekturlesen. &\\
+\hline
+11 &\multicolumn{2}{|c|}{\bf Bis 31.03.2016} &  - Abgabe der Bachelorarbeit beim Prüfungsamt.& \\
+\hline
+\end{longtable}
+\end{table}
+\noindent Der Zeitplan ist im Teilzeitstudium, der Prüfungsordung ensprechend, auf eine Bearbeitungszeit von 6 Monaten konzipiert.
+
+\end{document}
+
+
+
+
+
+\section*{Themenzusammenfassung}
+Im Rahmen dieser Abschlussarbeit soll ein Softwareprototyp realisiert werden, der es ermöglicht mit Hilfe definierter Augengesten einen beweglichen Roboter (iRobot Roomba 620) zu steuern. Die Augengestenerkennung erfolgt mittels eines stationären Eyetrackingsystems (Systems RED von SensoMotoric Instruments GmbH), welches an einem Bildschirm angebracht ist. Hierbei ermöglicht eine am Roboter angebrachte Kamera eine \enquote{Live-Ansicht} der Umgebung aus \enquote{Sicht} des Roboters und präsentiert dies auf den Stimuluspräsentierenden Bildschirm, welcher vom Eyetracker \enquote{überwacht} wird. Primär soll in der Arbeit die Frage der Machbarkeit und die Frage der Präzision einer derartigen Mensch-Roboter-Interaktion geklärt werden. Ferner soll abgeschätzt werden, wie ermüdend diese Art der Steuerung ist und ob Unterschiede zwischen den verschiedenen Steuerungssystemen vorhanden sind. Außerdem soll eine Art \enquote{Panikschalter}, also ein sofortiger Stopp des Roboters umgesetzt werden.
+ 
+Die Steuerung eines Roboters durch Augengesten ist Teil eines Prototyps, mit welchem die Kommunikations- und Interaktionsmöglichkeiten von Locked-In-Syndrom (LIS) Patienten unter Verwendung eines Telepräsenz-System (TPS) erheblich erleichtert und erweitert werden sollen. Im Rahmen des Prototyps sollen zudem in Zukunft ausgewählte Interaktionsmöglichkeiten durch eine automatische Objektklassifikation in den Videobildern des TPS umgesetzt werden (\vgl \cite{Eidam2016}). Letzteres ist jedoch nicht Gegenstand dieser Arbeit. 
+ 
+% Aufgrund der inhaltlichen Nähe der Grundlagen dieser Arbeit mit der Vorgängerarbeit von Frau Eidam, werde ich mich bzgl. der Grundlagen stark inhaltlich an dieser Arbeit orientieren. Hierbei sollen zu Beginn ebenfalls die grundsätzliche Funktionsweise des menschlichen Auges und deren Bewegungen aufgezeigt werden. Es sollen die Möglichkeiten der Aufzeichnung von Augenbewegung mittels Eyetracker aufgezeigt werden. Es folgt eine Darstellung der verschiedenen möglichen Methoden mit Spezifizierung der in der Arbeit verwendeten Tracking Methode, sowie ein Überblick über die Anwendungsgebiete von Eyetrackingsystemen mit der Hinführung zu Medizinischen Anwendungsgebieten und hier spezielle Erkrankungen, welche für Eyetrackingsysteme und zur Erweiterung der Möglichkeiten einzelner beeinträchtigter Personen eingesetzt werden können. Abschließend soll der Einsatz von Telepräsenzrobotern in diesem Anwendungsbereich beschrieben und der aktuelle Stand dieser Technik aufgezeigt werden.
+ 
+%Anschließend folgt die Beschreibung, der zur Realisierung der Software notwendigen Modellbildung, welche sich ebenfalls an der Struktur des MVC orientiert und dies um die Bereiche des Roomba-Client und die MJPG- Video-Stream erweitern soll. Es folgt die Beschreibung der Augengestensteuerung und die Beschreibung der Umsetzung der Steuerungsmethoden. Angedacht sind eine Basissteuerung und eine Art “Joystick”-Steuerung. Folgend wird auf die Benutzeroberfläche und die Softwarearchitektur, sowie die technische Umsetzung eingegangen werden, analog zur Arbeit von Frau Eidam. 
+
+Die Benutzerfreundlichkeit des Systems soll mittels eines Usability-Tests evaluiert und bestätigt werden. Es gibt bereits TPS auf dem Markt, jedoch ist die Steuerung per Augengesten bislang kaum etabliert.
+Zur Testung der Usibility in den Bereichen: Präzision, Ermüdung, \enquote{Panikschalter} ist geplant, dies mittels eines \enquote{Parcours} mit einzelnen \enquote{Punkten}, die von einem Startpunkt angefahren werden zu testen. Hierbei kann die Quantifizierung der Steuerungssignale oder der absoluten Zeit als Merkmal dienen. Ferner kann überlegt werden, ob die Steuerung mit den Augen gegen eine \enquote{normale} Nutzung mit Maus oder Tastatur getestet werden soll und in wieweit sich dies unterscheidet. Als Steuerungsmodi für den Roboter, soll eine \enquote{einfache} Basissteuerung sowie eine etwas anspruchsvollere Steuerung in Form einer Art \enquote{Joystick} realisiert werden.
+
+Der Prototyp baut grundsätzlichen auf dem Programm zur Erkennung von Augengesten zur Sonifikation von Bilddateien von Frau Eidam \cite{Eidam2016} auf. Hierbei wird das Programm jedoch um die Visualisierung eines Motion JPEG Streams mittels Java und der Steureungsmodi zur Bewegung des Roombas augmentiert. Die Funktionalität der Objekterkennung von statischen Bildern und Sonifikation bleibt erhalten, wird jedoch nicht genutzt.
+
+Die Software ist somit prinzipiell eine Erweiterung der Software von Frau Eidam und basiert damit auf den bereits gewonnen Eigenschaften bzgl der Augengesten, um dem o.g. Langzeitziel einen Schritt näher zu kommen. 
+
+
+\newpage
+
+\section*{Zeitplan}
+\begin{table}[htp]
+\begin{longtable}{|p{1cm}|p{1.5cm}|p{1.5cm}|p{9cm}|p{0.5cm}|}
+%\begin{tabular}{l|l|ll|c}
+%\toprule
+\multicolumn{5}{c}{\LARGE \bf{Grober Zeitplan -  Abschlussarbeit
+}}  \\
+\hline
+\rowcolor{orange} \bf Mlst. & \bf Von & \bf Bis & \bf Ziele & \\
+%\midrule
+%\cellcolor{green}
+%\checked 
+
+%\newline - Software-Testversion - Stabilität ausreichend zur Evaluation der Basis-Steuerung + Codeoptimierung + Testfälle besprechen. 
+
+%\newline - Konzept der Arbeit fertigstellen und Unklarheiten besprechen.
+
+\hline
+1 &\multicolumn{2}{|c|}{\bf Bis 01.10.2016} &  - Anmeldung der Bachelorarbeit beim Prüfungsamt.
+\newline - Evaluationsbogen mit Evaluationsinhalten festlegen. 
+& \\
+\hline
+2 & \multicolumn{2}{|c|}{KW 40} & - Fertigstellung des Kapitels Einführung.&\\ 
+\hline
+3 & KW 41 & KW 43 & - Fertigstellung des Kapitels Grundlagen. \newline - Fertigstellung des Kapitels Fragestellung und Testmerkmale.
+\newline - Fertigstellung Evaluationsbogen. & \\
+\hline
+4 & KW 44 & KW 45 & - Softwareimplementierung der Augensteuerung abschließen. & \\
+\hline
+5 & \multicolumn{2}{|c|}{KW 46} & - Präsenzphase in Hagen mit Testung und Evaluation der Augensteuerung. & \\
+\hline
+6 & KW 47 & KW 48 & - Fertigstellung Kapitel Implementierung.\newline - Evaluationsergebnisse zusammenfassen. & \\
+\hline
+7 & KW 49 & KW 52 & - Fertigstellung der ersten Version der Abschlussarbeit nach Abschluss der letzten Kapitel.\newline - Abgabe zum ersten Korrekturlesen. & \\
+\hline
+8 & KW 1 & KW 4 & - Pufferphase.&\\
+\hline
+9 & KW 5 & KW 8 & - Bearbeitung der Korrekturvorschläge mit Fertigstellung der zweiten Version. 
+\newline - ggf. Abgabe zum zweiten Korrekturlesen.& \\
+\hline
+10 & KW 9 & KW 11 & - Bearbeitung der Korrekturvorschläge mit Fertigstellung der endgültigen Version. \newline - ggf. Abgabe zum letzten Korrekturlesen. &\\
+\hline
+11 &\multicolumn{2}{|c|}{\bf Bis 31.03.2016} &  - Abgabe der Bachelorarbeit beim Prüfungsamt.& \\
+\hline
+\end{longtable}
+\end{table}
+\noindent Der Zeitplan ist im Teilzeitstudium, der Prüfungsordung ensprechend, auf eine Bearbeitungszeit von 6 Monaten konzipiert.
+
+
+

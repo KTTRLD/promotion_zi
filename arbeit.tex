@@ -1,0 +1,93 @@
+\documentclass[11pt,a4paper,onecolumn,twoside,ngerman]{book}
+
+% Konfiguration laden
+\include{includes/configuration}
+
+% Shortcuts laden
+\include{includes/shortcuts}
+
+% Das Hauptdokument
+\begin{document}
+
+  % Sprache
+  \selectlanguage{ngerman}
+  
+  % Titelseite
+\include{includes/titelseite}
+  \blankpage
+
+  % römischen Seitenzahlen
+  \pagenumbering{roman}
+
+  % Inhaltsverzeichnis
+  \tableofcontents
+  \cleardoublepage
+
+  \include{kapitel/00_zusammenfassung}
+  \cleardoublepage
+
+ %% Abkürzungsverzeichnis
+\include{kapitel/Abk}
+\cleardoublepage
+ %\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+ %\blankpage
+ %
+
+  % arabische Seitezahlen
+  \pagenumbering{arabic}
+	
+  % Kapitel 0 
+  %\include{kapitel/000_Themen}
+  
+  % Kapitel 1
+ \include{kapitel/01_einleitung}
+   
+  % Kapitel 2
+ \include{kapitel/02_grundlagen}
+  
+  % Kapitel 3
+ \include{kapitel/03_fragestellung}
+  
+  % Kapitel 4
+ \include{kapitel/04_implementierung}
+  
+  % Kapitel 5
+ \include{kapitel/05_evaluation}
+ 
+  % Kapitel 6
+ \include{kapitel/06_ergebnisse}
+
+  % Kapitel 7
+  \include{kapitel/07_zusammenfassung}
+
+  % Anhang 
+  \appendix
+  \include{kapitel/A_anhang}
+  \include{kapitel/B_anhang}
+  
+
+  %% ------------------------------------------------------------------------
+  %% Optional:
+  %
+  %% Abbildungsverzeichnis
+  %\listoffigures
+  %\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+  %\cleardoublepage
+  %
+  %% Algorithmenverzeichnis
+  %\listofalgorithms
+  %\addcontentsline{toc}{chapter}{Algorithmenverzeichnis}
+  %\cleardoublepage
+  %% ------------------------------------------------------------------------
+  
+  % Literaturverzeichnis
+  \bibliographystyle{alphadin}
+  \bibliography{literatur/literatur}
+  \addcontentsline{toc}{chapter}{\bibname}
+ \cleardoublepage
+  \include{includes/danksagung}
+ %\include{includes/C_anhang}
+  \cleardoublepage
+  \include{includes/erklaerung}
+\end{document}
+

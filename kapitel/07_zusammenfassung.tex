@@ -1,0 +1,91 @@
+% kapitel7.tex
+\chapter{Zusammenfassung und Ausblick}
+\label{chapter:zusammenfassung}
+
+Ziel dieser Abschlussarbeit war es, für ein einfaches \acl{tps} zwei unterschiedliche blick- und augengestenbasierte Steuerungsmethoden in Form eines Softwareprototyps zu realisieren. Hierfür wurde ein mobiler Staubsaugerroboter durch die Augmentierung um eine Kamera zu einem einfachen \acl{tps} umfunktioniert. Mittels der visuellen Rückmeldung des Systems,- war es einer Gruppe von fünf gesunden freiwilligen Testteilnehmern möglich, eine entworfene Parcoursaufgabe durch Teleoperation\footnote{Im Sinne von \enquote{Fernsteuerung}} des \acs{tps}, einzig auf Blick- und Augengesten basierend, zu bewältigen. 
+
+Zur Detektion der Blick- und Augengesten wurde ein stationäres videobasiertes Eye\-track\-ing-System verwendet, das mittels des Dark-Pupil-Verfahrens den \acl{por} des Benutzers berechnet und damit die Augengesten erkennt. Dabei konnte durch insgesamt vier verwendeten Augengesten (Fixation, Blickgeste, Lidschluss, vertikaler Augenbewegung) die Interaktion mit der Benutzerschnittstelle des Systems realisiert werden. 
+
+Die anschließende Befragung der Testteilnehmer mittels eines selbst entworfenen Fragebogens zeigte, dass eine Steuerung nur auf Blick- und Augengesten aufbauend,- von den Testpersonen größtenteils gut aufgenommen und akzeptiert wurde. Im Rahmen der differenzierten Befragung ließ sich eine leichte Präferenz hin zu einer der beiden Steuerungsmethoden erkennen. Diese präferierte \textit{diskrete}~Steuermethode stellt im Grunde vier Richtungspfeiltasten einer Tastatur im Blickfeld der Testperson dar und ermöglichte so die einfache Interaktion mit dieser Steuerkomponente. Die \textit{kontinuierliche}~Steuerungsmethode (als zweite Steuermethode), bei der die Augen als eine Art Steuerhebel fungierten, wurde ebenfalls als adäquate Möglichkeit einer Blick- und Augengestensteuerung erachtet. In Bezug auf das Handling, die Ermüdung, die Umsetzung eines unmittelbaren Stoppmechanismus und allgemein im Hinblick auf die Gesamtbewertung wurde diese Steuermethode jedoch von der Mehrzahl der Testpersonen nicht favorisiert. Die Befragung zeigte außerdem, dass die Implementierung einer Kollisionsvermeidung für die Teleoperation eine sinnvolle Erweiterung bieten kann. 
+
+Obwohl die vorliegende Arbeit die Methodik der blick- und augenbasierten Steuerung nur mit einer kleinen Zahl von motorisch unbeeinträchtigten Personen getestet hat, liefert diese Arbeit Hinweise darauf, dass eine Steuerung eines mobilen Roboters mithilfe eines Eyetracking-Systems auch durch Personen mit Bewegungseinschränkungen bei erhaltener Okulomotorik möglich ist.
+
+Im Hinblick auf eine zukünftige Nutzung einer Kombination aus Eyetracking-System und mobilen \acl{tps} stellt die sichere und natürliche Steuerung einen wichtigen Teilschritt dar. Es sind jedoch weitere Schritte notwendig, um das Potenzial des hier skizzierten alternativen Kommunikationskonzeptes für Personen mit Sprach- und Bewegungseinschränkungen zu klären. 
+
+Um diese Frage zukünftig genauer beantworten zu können, sollte in weiteren Arbeitsschritten die Studie an einer größeren Probandenzahl evaluiert werden, um die bevorzugte Steuermethode differenzierter zu untersuchen. Dabei wäre es auch denkbar, weitere Testparameter wie \zB die Vorerfahrung eines Benutzers und die Untersuchung eines Gewöhnungs- \bzw Lerneffektes mit einzubeziehen, um diesen Effekt mit Vorarbeiten zu vergleichen, \vgl~\cite{Casper2003}. Hierbei ist es sicherlich vorteilhaft, den Testparcour zu erweitern, um auch komplexere Testsituationen, die näher an natürlichen Szenarien orientiert sind, kreieren zu können. 
+
+Ein angepasstes Studiendesign mit Anwendern mit motorischen Bewegungseinschränkungen, beispielsweise in einer neurologischen Rehabilitationseinrichtung, wäre ebenfalls ein möglicher Schritt hin zu neuen Erkenntnissen. Hierdurch kann die Frage der grundlegenden Akzeptanz eines solchen Systems untersucht werden. Ferner müssen in Bezug auf die Bedürfnisse einer späteren Anwendergruppe die genaueren Anforderungen geklärt werden, um die Benutzerinteraktion zu verbessern. Weitere Arbeiten sollten den Stellenwert der Kollisionsvermeidung und auch erweiterte Steuermethoden, wie die in Abschnitt~\ref{section:steuerung} beschriebenen, beinhalten. Des Weiteren kann das Konzept der Telepräsenz, das in der vorliegenden Arbeit nur mittels einer relativ einfachen visuellen Erweiterung eines mobilen Roboters realisiert wurde, für die Verbesserung der \acs{sa} und damit vermutlich zu einer Verbesserung der Teleoperation beitragen.
+
+%Technische Unterstützung für Personen mit motorischen Beeinträchtigungen anzubieten erscheint rein aus menschlichen Gesichtspunkten als erstrebenswertes Ziel. Der Mensch ist ein soziales Lebewesen und auf die Interaktion mit der Umgebung maßgeblich angewiesen. Zukünftige erweiterte Prototypen bieten das Potential die Interaktions- und Kommunikationsfähigkeit von Personen mit Bewegungseinschränkungen entscheidend zu verbessern um dieser Personengruppe zu einer aktiven und selbstbestimmten Lebensführung zu verhelfen.
+
+\begin{comment}
+
+mit der Umgebu die sichere und müssen diese Ergebnisse in größeren Stichproben verifiziert und reevaluiert werden.
+
+
+
+Zusammenfassend lässt sich deshalb feststellen, das der vorliegende Prototyp einen Teilschritt hin zu einem System darstellen kann, welches in Zukunft die Kommunikations- und Interaktionsmöglichkeit von Personen mit Sprach- und Bewegungseinschränkungen durch die Nutzung von technischen Komponenten wie in der vorliegenden Arbeit skizziertem System erleichtern und erweitern soll. Langfristiges Ziel in weiteren Projektschritten ist es, ausgewählte Interaktionsmöglichkeiten durch eine automatische Objektklassifikation in den Videobildern des \acs{tps} umzusetzen. Bislang besteht die Kommunikation von Personen mit Sprach- und Bewegungseinschränkungen wie oben beschrieben weitgehend in einer Interaktion mittels statischer Inhalte.
+
+
+
+Der Mensch ist ein soziales Lebewesen und auf die Interaktion mit der Umgebung maßgeblich angewiesen. Geht die Möglichkeit der Kommunikation oder der motorischen Interaktion krankheitsbedingt verloren, stellt dies einen tiefen Einschnitt in das Leben der Betroffenen dar. 
+Mit der vorliegenden Abschlussarbeit konnte ein Softwareprotoyp implementiert und getestet werden, welcher mithilfe eines Eyetracking-Systems die Steuerung eines mobilen Robotersystems ermöglicht. Damit konnte ein Beitrag hin zu einem zukünftigen System geleistet werden, welches ausgewählte Kommunikations- und Interaktionsmöglichkeiten zwischen Personen mit Sprach-und Bewegungseinschränkung und der unmittelbaren Umgebung erweitert.
+
+
+
+
+Die Augen bleiben oftmals als einziger Interaktionsmöglichkeit erhalten. Unterstützende technische Systeme sind notwendig um betroffenen Personen zu helfen. Einen Schritt hin zu einer erweiterten Kommunikations- und Interaktionsmöglichkeit mit der unmittelbaren Umgebung kann in der Kombination eines Eyetracking-Systems und eines \acl{tps} liegen. Mit der vorliegenden Abschlussarbeit konnte ein Softwareprotoyp implementiert werden, der zwei Lösungsmethoden zur blickbasierten Steuerung eines mobilen Roboters ermöglicht. die Handhabung, die Machbarkeit und die Präzision einer derartigen Mensch-Roboter-Interaktion zu untersucht. Ferner konnte ein sofortiger Stoppmechanismus in Form eines \enquote{Panikschalters} realisiert und beurteilt werden.
+
+\textcolor{red}{
+Zusammenfassend zeigte die Evaluation und Nutzung des Prototypen, dass beide Steuerformen (diskret \& kontinuierlich) eine erfolgreiche Bewältigung der Parcourausführung bei allen beteiligten Testpersonen (n=5) zuließ. Es zeigten sich hierbei Unterschiede in Abhängigkeit der Vorerfahrung der Benutzer bei der Ausführung der Parcourbewälltigungsaufgabe. Ferner war eine gewisse \enquote{Gewöhnungs}-tendenz erkennbar. Beide Merkmale (Vorerfahrung, Gewöhnung) wurden nicht untersucht. Die Zeiten der Durchführung variierten teilweise deutlich zwischen verschiedenen Testpersonen. So lagen bei der kontinuierlichen Steuermethode die \enquote{Bestzeit} bei 36 Sekunden für einen Parcourdurchlauf im Vergleich zu 1:03 Minuten bei der diskreten Methode. Die langsamste Durchführungszeit lag für die kontinuierliche Steuerform bei 2:46 Minuten im Vergleich zu 2 Minuten bei der diskreten Methode. Bei allen Testpersonen traten unerwartete Ausführungen während der Nutzung auf. Die Steuerung wurde jedoch insgesamt mit gut bis befriedigend bewertet. Beide Steuerformen wurden tendenziell als \enquote{wenig ermüdend} eingestuft.}
+%\begin{comment}
+
+
+
+%\begin{landscape}
+\begin{tabular}{rllrllllllllllll }
+  %  \begin{tabular*}{0.75\textwidth}{@{\extracolsep{\fill}{rllrllllllllllll}
+  \hline
+ & Name & Modus & Zeit & Blickbewegung & Lidschluss & Horizontale\_Augengeste & Vertikale\_Augengeste & Stoppmechanismus & Steuerungskomandos & Moduswechsel & Sonstige & Ermüdung & Handling & Panikschalter & Note \\ 
+  \hline
+1 & A & Diskret & 120 & TRUE & FALSE & FALSE & FALSE & FALSE & FALSE & FALSE & FALSE & wenig ermüdend & einfach & einfach & 2 \\ 
+  2 & B & Diskret &  63 & FALSE & FALSE & FALSE & FALSE & FALSE & FALSE & FALSE & FALSE & wenig ermüdend & einfach & sehr einfach & 2 \\ 
+  3 & C & Diskret & 120 & TRUE & FALSE & FALSE & FALSE & FALSE & FALSE & TRUE & FALSE & wenig ermüdend & einfach & sehr einfach & 2 \\ 
+  4 & D & Diskret & 105 & FALSE & FALSE & FALSE & FALSE & FALSE & FALSE & FALSE & FALSE & wenig ermüdend & einfach &  & 2 \\ 
+  5 & E & Diskret &  96 & FALSE & FALSE & FALSE & FALSE & FALSE & FALSE & FALSE & TRUE & wenig ermüdend & schwer & einfach & 3 \\ 
+  6 & A & Kontinuierlich &  96 & TRUE & FALSE & FALSE & FALSE & FALSE & FALSE & FALSE & FALSE & wenig ermüdend & einfach & einfach & 2 \\ 
+  7 & B & Kontinuierlich &  36 & FALSE & TRUE & FALSE & FALSE & FALSE & FALSE & FALSE & TRUE & ermüdend & einfach & schwer & 3 \\ 
+  8 & C & Kontinuierlich & 180 & TRUE & TRUE & FALSE & FALSE & TRUE & FALSE & FALSE & FALSE & ermüdend & schwer & schwer & 3 \\ 
+  9 & D & Kontinuierlich & 166 & FALSE & TRUE & FALSE & FALSE & FALSE & FALSE & FALSE & TRUE & ermüdend & schwer &  & 4 \\ 
+  10 & E & Kontinuierlich &  92 & FALSE & TRUE & FALSE & FALSE & TRUE & FALSE & FALSE & TRUE & wenig ermüdend & einfach & einfach & 2 \\ 
+   \hline
+\end{tabular}
+%\end{landscape}
+
+begin{table}[ht]
+\centering
+\begin{adjustbox}{width=1\textwidth}
+\small
+\begin{tabular}{rlrrrrrrr}
+  \hline
+ & X & MASHvstRap & MASHvsBEEML & tRapvsBEEML & frequency & Mash\_mean & BEEML\_mean & tRap\_mean \\ 
+  \hline
+1 & ETS & 8.95e-04 & 7.35e-04 & 4.78e-06 &  10 & 0.52 & 0.67 & 0.30 \\ 
+  11 & ZnF\_C2H2 & 7.08e-21 & 2.09e-02 & 1.70e-26 &  54 & 0.55 & 0.64 & 0.25 \\ 
+  10 & Zn2Cys6 & 4.94e-04 & 5.50e-02 & 3.52e-06 &  17 & 0.38 & 0.61 & 0.13 \\ 
+  8 & IRF & 1.16e-06 & 6.65e-02 & 5.54e-08 &  10 & 0.52 & 0.62 & 0.28 \\ 
+  2 & FH & 1.27e-05 & 8.61e-02 & 5.20e-07 &  10 & 0.53 & 0.66 & 0.27 \\ 
+  3 & HLH & 2.49e-05 & 1.31e+00 & 4.27e-05 &  13 & 0.61 & 0.74 & 0.26 \\ 
+  4 & HMG & 8.73e-33 & 1.41e+00 & 3.49e-08 &  44 & 0.55 & 0.48 & 0.12 \\ 
+  12 & ZnF\_C4 & 2.92e-06 & 1.92e+00 & 1.03e-07 &  10 & 0.66 & 0.73 & 0.27 \\ 
+  9 & unknown & 3.15e-27 & 1.96e+00 & 5.38e-21 & 121 & 0.44 & 0.49 & 0.16 \\ 
+  5 & Homeo & 1.69e-164 & 6.26e+00 & 2.35e-75 & 158 & 0.72 & 0.73 & 0.17 \\ 
+  7 & Homeo, POU & 3.12e-12 & 7.36e+00 & 5.21e-12 &  11 & 0.69 & 0.70 & 0.18 \\ 
+  6 & Homeo  & 9.82e-13 & 9.73e+00 & 1.21e-05 &  19 & 0.67 & 0.65 & 0.14 \\ 
+   \hline
+\end{tabular}
+\end{adjustbox}
+\caption{Paired t-test of most common TF families for Pearson Correlations} 
+\end{table} 
+
+\end{comment}
